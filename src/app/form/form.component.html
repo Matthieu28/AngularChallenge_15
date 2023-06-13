@@ -1,15 +1,14 @@
 <div class="container">
-  <h2>Form :</h2>
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div formGroupName="credentials">
-      <label for="email">
-        Email :
+      <div class="lab-inp">
+        <label for="email"> Email : </label>
         <input type="email" formControlName="email" />
-      </label>
-      <label for="password">
-        Password :
+      </div>
+      <div class="lab-inp">
+        <label for="password"> Password : </label>
         <input type="password" formControlName="password" />
-      </label>
+      </div>
     </div>
     <button type="submit" [disabled]="userForm.invalid">Click</button>
   </form>
